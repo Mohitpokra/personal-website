@@ -1,5 +1,5 @@
 <template>
-<v-container>
+<v-container fluid>
     <h1 class="text-xs-center mb-5">Here's what I've done so far</h1>
     <v-layout class="my-5" row wrap fill-height>
         <v-flex md3 hidden-sm-and-down>

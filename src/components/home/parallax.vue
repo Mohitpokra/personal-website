@@ -1,6 +1,6 @@
 <template>
 <div>
-    <v-parallax :height="$vuetify.breakpoint.smAndDown ? 200 : 400">
+    <v-parallax :height="$vuetify.breakpoint.smAndDown ? 200 : 250">
         <v-img class="avatar grey lighten-2 pa-0 ma-0" :height="$vuetify.breakpoint.smAndDown ? 200 : 400" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" :lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
             <template v-slot:placeholder>
                 <v-layout fill-height align-center justify-center ma-0>
@@ -10,7 +10,7 @@
         </v-img>
     </v-parallax>
     <div class="pos-rlt">
-        <v-container>
+        <v-container fluid>
             <v-layout row wrap >
                 <v-flex lg3 offset-lg1 xs12>
                     <v-layout row wrap align-content-space-between style="height: 100%">
@@ -41,7 +41,7 @@
                         </v-flex>
                     </v-layout>
                 </v-flex>
-                <v-flex lg7 offset-lg1 xs12>
+                <v-flex lg7 xs12>
                     <div class="mt-1">
                         <h1>Mohit Gupta </h1>
                         <hr />
@@ -50,7 +50,7 @@
                         </h2>
                         <div class="mt-4">
                             <v-btn color="info" to="/about" outline round :larger="$vuetify.breakpoint.smAndUp ? true : false">About-me</v-btn>
-                            <v-btn color="info" target="_blank" href="https://1drv.ms/b/s!AhYy4_8-3vmagdI8akTeY4fNXkK3Ug" :larger="$vuetify.breakpoint.smAndUp ? true : false" round>Download Resume</v-btn>
+                            <v-btn color="info" target="_blank" href="https://1drv.ms/b/s!AhYy4_8-3vmagdcanipsVotSwR42qw?e=chySeH" :larger="$vuetify.breakpoint.smAndUp ? true : false" round>Download Resume</v-btn>
                         </div>
                     </div>
                 </v-flex>
@@ -116,7 +116,7 @@ export default {
     justify-content: center;
     height: 250px;
     width: 250px;
-    margin-top: -60px;
+    margin-top: -125px;
     border-radius: 50%;
     overflow: hidden;
     text-align: center
@@ -188,7 +188,7 @@ export default {
         position: relative;
         height: 150px;
         width: 150px;
-        margin-top: -50px;
+        margin-top: -60px;
         border-radius: 50%;
         overflow: hidden;
     }

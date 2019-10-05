@@ -1,5 +1,5 @@
 <template>
-<v-container class="my-5">
+<v-container fluid class="my-5">
     <h1 class="text-xs-center mb-5">Professional Experience</h1>
     <div class="pos-rlt">
         <v-layout>

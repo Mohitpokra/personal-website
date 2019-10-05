@@ -13,8 +13,8 @@
         <h2 class="subtitle  mb-title">Discover who I am as a person</h2>
         <h1 class="title hidden-xs-only">My passsion and personality</h1>
     </div>
-    <div class="grey lighten-3 py-5">
-        <v-container>
+    <div class="grey lighten-3">
+        <v-container fluid>
             <v-layout>
                 <v-flex class="xs12 sm6 offset-sm3">
                     <h1 class="text-xs-center">A few fun facts about myself</h1>
@@ -24,7 +24,7 @@
         </v-container>
     </div>
     <div>
-        <v-container>
+        <v-container fluid>
             <v-layout row wrap>
                 <v-flex class="xs12 md6">
                     <h1 class="text-xs-left">Educational Details</h1>
@@ -56,7 +56,7 @@
                                     <p class="text-xs-center text-md-left"><strong class="blockquote font-weight-bold px-0">Senior Secondary Examination, BSER</strong></p>
                                     <div class="blockquote px-0">
                                         <ul>
-                                            <li class="text-align"> I was in 2012 batch preparing for jee too , It was fun and terrifying at the ending because I didn't get in IITs. passed with 80.6%.Those moments are like french fries but the crisp lasts lifelong. I
+                                            <li class="text-align"> I was in 2012 batch preparing for jee too , It was fun and terrifying at the ending because I didn't get in IITs. passed with 80.6%.Those moments are like french fries but the crisp lasts lifelong.
                                             </li>
                                             <!-- <li>Here, I have also contributed to Shakedeal store (the main product of company), Aegon power website (Private label brand), Shakedeal API and a new version of Shakedeal store which is under development. • </li> -->
                                         </ul>
@@ -160,7 +160,7 @@
         </v-container>
     </div>
     <div>
-        <v-container>
+        <v-container fluid>
             <v-layout>
                 <v-flex class="xs12" height="100%">
                     <h1 class="text-xs-center">Understand who I am as a person</h1>
@@ -172,7 +172,7 @@
         </v-container>
     </div>
     <div>
-        <v-container>
+        <v-container fluid>
             <v-layout row wrap>
                 <v-flex class="xs6 sm4 md3" height="100%">
                     <v-img :src="require('@/assets/about/img1.jpg')" aspect-ratio="1.7" :lazy-src="require('@/assets/lazy.jpg')" class="grey lighten-2">

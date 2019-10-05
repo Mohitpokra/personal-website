@@ -1,6 +1,6 @@
 <template>
 <div class="grey lighten-3">
-    <v-container class="mb-5 pb-5">
+    <v-container fluid class="mb-5 pb-5">
         <h1 class="text-xs-center mb-2">Family means the world to me</h1>
         <h2 class="text-xs-center mb-5"> Here are a few snaps I took</h2>
         <v-layout row wrap>
@@ -142,7 +142,7 @@
                     <v-card-title primary-title>
                         <div>
                             <div class="subheading">Togetherness</div>
-                            <!-- <span class="grey--text">1,000 miles of wonder</span> -->
+                            <span class="grey--text">Family</span>
                         </div>
                     </v-card-title>
 
@@ -175,7 +175,7 @@
                     <v-card-title primary-title>
                         <div>
                             <div class="subheading">Tripling</div>
-                            <!-- <span class="grey--text">1,000 miles of wonder</span> -->
+                            <span class="grey--text">Full Fun!</span>
                         </div>
                     </v-card-title>
 
