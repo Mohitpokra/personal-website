@@ -1,5 +1,5 @@
 <template>
-<div class="grey lighten-3">
+<div :class="{'lighten-3': !isDark}">
     <v-container fluid class="mb-5 pb-5">
         <h1 class="text-xs-center mb-2">Family means the world to me</h1>
         <h2 class="text-xs-center mb-5"> Here are a few snaps I took</h2>
@@ -201,7 +201,12 @@
 export default {
     data: () => ({
         show: false
-    })
+    }),
+   computed: {
+       isDark() {
+           return this.$store.state.isDark;
+       }
+   }
 }
 </script>
 

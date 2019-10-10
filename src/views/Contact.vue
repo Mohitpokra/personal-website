@@ -2,9 +2,9 @@
 <div>
     <v-layout>
         <v-flex>
-            <v-card class="elevation-0">
+            <v-card class="elevation-0" :class="{'bg-lt-dark ': isDark}">
                 <v-parallax :height="$vuetify.breakpoint.smAndDown ? 200 : 400">
-                    <v-img class="avatar grey lighten-2 pa-0 ma-0" :height="$vuetify.breakpoint.smAndDown ? 200 : 400" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
+                    <v-img class="avatar grey lighten-2 pa-0 ma-0" :height="$vuetify.breakpoint.smAndDown ? 200 : 400" :src="parallex" lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
                         <template v-slot:placeholder>
                             <v-layout fill-height align-center justify-center ma-0>
                                 <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -13,7 +13,7 @@
                     </v-img>
                 </v-parallax>
 
-                <v-card-title primary-title style="justify-content: center">
+                <v-card-title class="elevation-0" primary-title style="justify-content: center">
                     <v-list>
                         <v-list-tile>
                             <v-list-tile-action>
@@ -57,10 +57,22 @@
 
 <script>
 export default {
-
-}
+    computed: {
+        parallex() {
+            let isDark = this.$store.state.isDark;
+            return isDark ?
+                "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" :
+                "https://cdn.vuetifyjs.com/images/parallax/material2.jpg";
+        },
+        isDark() {
+            return this.$store.state.isDark;
+        }
+    }
+};
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.bg-lt-dark {
+    background: #303030 !important;
+}
 </style>

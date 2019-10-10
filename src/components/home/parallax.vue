@@ -1,7 +1,7 @@
 <template>
 <div>
-    <v-parallax :height="$vuetify.breakpoint.smAndDown ? 200 : 250">
-        <v-img class="avatar grey lighten-2 pa-0 ma-0" :height="$vuetify.breakpoint.smAndDown ? 200 : 400" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" :lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
+    <v-parallax :height="$vuetify.breakpoint.smAndDown ? 200 : 300">
+        <v-img class="avatar grey lighten-2 pa-0 ma-0" :height="$vuetify.breakpoint.smAndDown ? 200 : 400" :src="parallex" :lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
             <template v-slot:placeholder>
                 <v-layout fill-height align-center justify-center ma-0>
                     <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
@@ -13,7 +13,7 @@
         <v-container fluid>
             <v-layout row wrap >
                 <v-flex lg3 offset-lg1 xs12>
-                    <v-layout row wrap align-content-space-between style="height: 100%">
+                    <v-layout row wrap align-content-center style="height: 100%">
                         <v-flex class="center" md12 xs6>
                             <div class="user-avatar">
                                 <v-img class="avatar grey lighten-2" :src="require('@/assets/profile.jpg')" position="top center" :lazy-src="require('@/assets/lazy.jpg')" aspect-ratio="1">
@@ -82,6 +82,12 @@ export default {
     data: () => ({
         isMobile: false
     }),
+    computed: {
+        parallex () {
+            let isDark = this.$store.state.isDark;
+            return isDark ? 'https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg' : 'https://cdn.vuetifyjs.com/images/parallax/material2.jpg'
+        }
+    },
     beforeDestroy() {
         if (typeof window !== 'undefined') {
             window.removeEventListener('resize', this.onResize, {
@@ -114,8 +120,8 @@ export default {
 .user-avatar {
     display: flex;
     justify-content: center;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     margin-top: -125px;
     border-radius: 50%;
     overflow: hidden;
