@@ -7,9 +7,9 @@ export default new Vuex.Store({
   state: {
     pageHeadings: [{
         name: "home",
-        ids: ["#top", "#experience", "#skills", "#projects", "#family"],
-        titles: ["Top", "Work Experience", "skills", "Projects", "Family"],
-        icons: ["fa fa-arrow-up", "fa fa-briefcase", "fa fa-cogs", "fa fa-code", "fa-users"],
+        ids: ["#top", "#experience", "#skills", "#projects"],
+        titles: ["Top", "Work Experience", "skills", "Projects"],
+        icons: ["fa fa-arrow-up", "fa fa-briefcase", "fa fa-cogs", "fa fa-code"],
       },
       {
         name: "about",

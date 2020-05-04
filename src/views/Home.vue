@@ -41,7 +41,7 @@
     </v-container>
 
     <Project id="projects" />
-    <Family id="family" />
+    <!-- <Family id="family" /> -->
   </v-flex>
 </template>
 

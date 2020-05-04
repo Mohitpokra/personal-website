@@ -1,6 +1,6 @@
 <template>
   <v-app app id="top" :dark=isDark>
-    <div class="control-nav v-card v-sheet theme--light" v-if="ids">
+    <div class="control-nav v-card v-sheet theme--light hidden-sm-and-down" v-if="ids">
       <v-tooltip color="rgb(25, 118, 210)"  v-for="(item, index) in titles" :key="index" left>
         <template v-slot:activator="{ on }">
           <v-btn fab dark small color="primary" v-on="on" @click="scroll(ids[index], index)">
