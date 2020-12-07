@@ -50,7 +50,7 @@
                         </h2>
                         <div class="mt-4">
                             <v-btn color="info" to="/about" outline round :larger="$vuetify.breakpoint.smAndUp ? true : false">About-me</v-btn>
-                            <v-btn color="info" target="_blank" href="https://1drv.ms/b/s!AhYy4_8-3vmagdcanipsVotSwR42qw?e=chySeH" :larger="$vuetify.breakpoint.smAndUp ? true : false" round>Download Resume</v-btn>
+                            <v-btn color="info" target="_blank" href="https://1drv.ms/b/s!AhYy4_8-3vmagd5xDkuOrkzPv0Wo_w?e=ccDICs" :larger="$vuetify.breakpoint.smAndUp ? true : false" round>Download Resume</v-btn>
                         </div>
                     </div>
                 </v-flex>

@@ -41,7 +41,6 @@
     </v-container>
 
     <Project id="projects" />
-    <!-- <Family id="family" /> -->
   </v-flex>
 </template>
 
@@ -49,13 +48,11 @@
 import Parallax from "../components/home/parallax";
 import Experience from "../components/home/experience";
 import Project from "../components/home/project";
-import Family from "../components/home/family";
 export default {
   components: {
     Parallax,
     Experience,
-    Project,
-    Family
+    Project
   },
   data: () => ({})
 };

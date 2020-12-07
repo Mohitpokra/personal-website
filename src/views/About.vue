@@ -77,110 +77,13 @@
     <div>
       <v-container fluid id="gallery">
         <v-layout row wrap>
-          <v-flex class="xs6 sm4 md3" height="100%">
+          <v-flex class="xs6 sm4 md3" height="100%" v-for="(image, index) in media" :key="index">
             <v-img
-              :src="require('@/assets/about/img1.jpg')"
+              :src="image.src"
               aspect-ratio="1.7"
               :lazy-src="require('@/assets/lazy.jpg')"
               class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/family/bro.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/about/img4.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/family/brosis.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/about/img2.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/about/img6.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/about/img7.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-flex>
-          <v-flex class="xs6 sm4 md3" height="100%">
-            <v-img
-              :src="require('@/assets/about/img5.jpg')"
-              aspect-ratio="1.7"
-              :lazy-src="require('@/assets/lazy.jpg')"
-              class="grey lighten-2"
+              @click="openGallery(index)"
             >
               <template v-slot:placeholder>
                 <v-layout fill-height align-center justify-center ma-0>
@@ -190,12 +93,19 @@
             </v-img>
           </v-flex>
         </v-layout>
+        <LightBox
+          ref="lightbox"
+          :media="media"
+          :show-caption="true"
+          :show-light-box="false"
+        />
       </v-container>
     </div>
   </div>
 </template>
 
 <script>
+import LightBox from 'vue-image-lightbox'
 const COLORS = ["info", "primary", "error", "success"];
 const ICONS = {
   info: "mdi-information",
@@ -205,6 +115,9 @@ const ICONS = {
 };
 
 export default {
+  components: {
+    LightBox,
+  },
   data: () => ({
     interval: null,
     items: [
@@ -214,6 +127,31 @@ export default {
         icon: ICONS["info"]
       }
     ],
+    media: [{ 
+			thumb: require('@/assets/about/img1.jpg'),
+			src:  require('@/assets/about/img1.jpg')
+  	}, { 
+			thumb: require('@/assets/family/bro.jpg'),
+			src:  require('@/assets/family/bro.jpg')
+  	}, { 
+			thumb: require('@/assets/family/brosis.jpg'),
+			src:  require('@/assets/family/brosis.jpg')
+  	},{ 
+			thumb: require('@/assets/about/img2.jpg'),
+			src:  require('@/assets/about/img2.jpg')
+  	},{ 
+			thumb: require('@/assets/about/img6.jpg'),
+			src:  require('@/assets/about/img6.jpg')
+  	},{ 
+			thumb: require('@/assets/about/img7.jpg'),
+			src:  require('@/assets/about/img7.jpg')
+  	},{ 
+			thumb: require('@/assets/about/img5.jpg'),
+			src:  require('@/assets/about/img5.jpg')
+  	},{ 
+			thumb: require('@/assets/about/img4.jpg'),
+			src:  require('@/assets/about/img4.jpg')
+  	}],
     nonce: 2,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -262,6 +200,10 @@ export default {
   },
 
   methods: {
+    openGallery(index) {
+			console.log("I am in open gallery");
+      this.$refs.lightbox.showImage(index)
+    },
     addEvent() {
       let { color, icon } = this.genAlert();
 

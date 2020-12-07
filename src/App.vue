@@ -11,7 +11,7 @@
       </v-tooltip>
     </div>
     <TheHeader app />
-    <v-content>
+    <v-content app>
       <router-view></router-view>
     </v-content>
     <TheFooter app />
@@ -55,7 +55,6 @@ export default {
   methods: {
     scroll(target, index) {
       // eslint-disable-next-line
-      console.log(this, index);
       this.$vuetify.goTo(target, this.options);
     }
   }

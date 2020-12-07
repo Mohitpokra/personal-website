@@ -4,10 +4,32 @@
     <div class="pos-rlt">
         <v-layout>
             <v-flex md12 lg12>
-                <v-timeline class="hidden-sm-and-down">
-                    <v-timeline-item color="red lighten-2" large>
+                <v-timeline class="hidden-sm-and-down" large>
+                      <v-timeline-item color="red lighten-2">
                         <template v-slot:opposite>
-                            <span>Aug 2018-  Present</span>
+                            <span>April 2020-  Present</span>
+                        </template>
+                        <v-card class="elevation-2">
+                            <v-card-title>
+                                <div>
+                                    <div class="headline"> Gympik (RoundGlass)</div>
+                                    <div class="subheading pl-2">Senior Software Developer</div>
+                                </div>
+                            </v-card-title>
+                            <v-card-text>
+                                <ul>
+                                    <li class="subheading text-align">Gympik is efficiently determining the way people look at fitness and wellness, It acquired by RoundGlass, which is providing solutions to enable every individual to put holistic wellbeing at the center of their life’s journey.</li>
+                                    <v-divider class="my-2" dark></v-divider>
+                                    <li class="subheading text-align">In Gympik I have worked on Traqade, which is an all-in-one gym & club management software by Gympik. I have developed report and profile module in Traqade(Vue.js).<br> In RoundGlass I worked on collective. RoundGlass Collective is a platform for individuals to showcase their persona, connect with like minded people, engage and grow.
+                                     I have worked on version 2.0 & 3.0, which includes, Facebook Instant article Rss Feed automation (backend). Event listing, Receipe, Event Detail page(Angular.js) and sveral other components.
+                    </li>
+                                </ul>
+                            </v-card-text>
+                        </v-card>
+                    </v-timeline-item>
+                    <v-timeline-item color="red lighten-2" small>
+                        <template v-slot:opposite>
+                            <span>Aug 2018-  April 2020</span>
                         </template>
                         <v-card class="elevation-2">
                             <v-card-title>
@@ -51,7 +73,7 @@
                     <v-timeline-item color="pink" small>
                         <v-layout pt-3>
                             <v-flex xs3>
-                                <strong class="subheading">Aug 2018-  Present</strong>
+                                <strong class="subheading">Aug 2018-  April 2020</strong>
                             </v-flex>
                             <v-flex>
                                 <strong class="title">ShakeDeal (B2B) Bengaluru, Karnataka</strong>

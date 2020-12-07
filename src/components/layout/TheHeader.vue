@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar class="pa-1" fixed>
+    <v-toolbar class="pa-1" fixed app :clipped-left="clipped">
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-items>
         <v-btn round outline flat to="/" class="display-1 web-name" color="orange">mohit</v-btn>
@@ -13,7 +13,10 @@
       </v-toolbar-items>
     </v-toolbar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer"  fixed
+      left
+      clipped
+      app>
       <v-img
         src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
         gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
@@ -46,7 +49,8 @@
 <script>
 export default {
   data: () => ({
-    drawer: null,
+    drawer: false,
+    clipped: false,
     items: [
       {
         title: "Home",
