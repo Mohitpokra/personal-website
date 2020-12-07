@@ -127,31 +127,39 @@ export default {
         icon: ICONS["info"]
       }
     ],
-    media: [{ 
-			thumb: require('@/assets/about/img1.jpg'),
-			src:  require('@/assets/about/img1.jpg')
-  	}, { 
-			thumb: require('@/assets/family/bro.jpg'),
-			src:  require('@/assets/family/bro.jpg')
-  	}, { 
-			thumb: require('@/assets/family/brosis.jpg'),
-			src:  require('@/assets/family/brosis.jpg')
-  	},{ 
-			thumb: require('@/assets/about/img2.jpg'),
-			src:  require('@/assets/about/img2.jpg')
-  	},{ 
-			thumb: require('@/assets/about/img6.jpg'),
-			src:  require('@/assets/about/img6.jpg')
-  	},{ 
-			thumb: require('@/assets/about/img7.jpg'),
-			src:  require('@/assets/about/img7.jpg')
-  	},{ 
-			thumb: require('@/assets/about/img5.jpg'),
-			src:  require('@/assets/about/img5.jpg')
-  	},{ 
-			thumb: require('@/assets/about/img4.jpg'),
-			src:  require('@/assets/about/img4.jpg')
-  	}],
+    media: [
+      { 
+        thumb: require('@/assets/about/img1.jpg'),
+        src:  require('@/assets/about/img1.jpg')
+      },
+      { 
+        thumb: require('@/assets/family/bro.jpg'),
+        src:  require('@/assets/family/bro.jpg')
+      }, 
+      { 
+        thumb: require('@/assets/family/brosis.jpg'),
+        src:  require('@/assets/family/brosis.jpg')
+      },{ 
+        thumb: require('@/assets/about/img2.jpg'),
+        src:  require('@/assets/about/img2.jpg')
+      },
+      { 
+        thumb: require('@/assets/about/img6.jpg'),
+        src:  require('@/assets/about/img6.jpg')
+      },
+      { 
+        thumb: require('@/assets/about/img7.jpg'),
+        src:  require('@/assets/about/img7.jpg')
+      },
+      { 
+        thumb: require('@/assets/about/img5.jpg'),
+        src:  require('@/assets/about/img5.jpg')
+      },
+      { 
+        thumb: require('@/assets/about/img4.jpg'),
+        src:  require('@/assets/about/img4.jpg')
+      }
+    ],
     nonce: 2,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -201,7 +209,6 @@ export default {
 
   methods: {
     openGallery(index) {
-			console.log("I am in open gallery");
       this.$refs.lightbox.showImage(index)
     },
     addEvent() {

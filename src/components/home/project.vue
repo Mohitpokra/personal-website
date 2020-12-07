@@ -436,86 +436,112 @@ export default {
   },
   data() {
     return {
-        media1: [{ 
-			thumb: require('@/assets/projects/shakedeal.png'),
-			src: require('@/assets/projects/shakedeal.png')
-  	    }, { 
-			thumb: require('@/assets/projects/shakedeal2.png'),
-			src: require('@/assets/projects/shakedeal2.png')
-  	    }, { 
-			thumb: require('@/assets/projects/sdMob.jpg'),
-			src: require('@/assets/projects/sdMob.jpg')
-  	    }, { 
-			thumb: require('@/assets/projects/sdMob2.jpg'),
-			src: require('@/assets/projects/sdMob2.jpg'),
-        }],
-        media2: [{
-            thumb: require('@/assets/projects/snaphrm2.png'),
-            src: require('@/assets/projects/snaphrm2.png')
-        }, {
-            thumb: require('@/assets/projects/snaphrm.png'),
-            src: require('@/assets/projects/snaphrm.png')
-        }],
-        media3: [{ 
-			thumb: require('@/assets/projects/mobileapp.png'),
-			src: require('@/assets/projects/mobileapp.png')
-  	    }, { 
-			thumb: require('@/assets/projects/mobileapp2.png'),
-			src: require('@/assets/projects/mobileapp2.png')
-  	    }, { 
-			thumb: require('@/assets/projects/hybrid.jpg'),
-			src: require('@/assets/projects/hybrid.jpg')
-  	    }, { 
-			thumb: require('@/assets/projects/hybrid2.jpg'),
-			src: require('@/assets/projects/hybrid2.jpg'),
-        }],
-        media4: [{ 
-			thumb: require('@/assets/projects/sdnext2.png'),
-			src: require('@/assets/projects/sdnext2.png')
-  	    }, { 
-			thumb: require('@/assets/projects/sdnext3.png'),
-			src: require('@/assets/projects/sdnext3.png')
-  	    }, { 
-			thumb: require('@/assets/projects/sdnext.png'),
-			src: require('@/assets/projects/sdnext.png')
-        }],
-        media5: [{ 
-			thumb: require('@/assets/projects/split-bill2.png'),
-			src: require('@/assets/projects/split-bill2.png')
-  	    }, { 
-			thumb: require('@/assets/projects/split-bill.png'),
-			src: require('@/assets/projects/split-bill.png')
-  	    }, { 
-			thumb: require('@/assets/projects/split-bill4.png'),
-			src: require('@/assets/projects/split-bill4.png')
-          }],
-        media6: [{ 
-			thumb: require('@/assets/projects/aegon.png'),
-			src: require('@/assets/projects/aegon.png')
-  	    }, { 
-			thumb: require('@/assets/projects/aegon2.png'),
-			src: require('@/assets/projects/aegon2.png')
-  	    }, { 
-			thumb: require('@/assets/projects/aegonMob2.jpg'),
-			src: require('@/assets/projects/aegonMob2.jpg')
-  	    }, { 
-			thumb: require('@/assets/projects/aegonMob3.jpg'),
-			src: require('@/assets/projects/aegonMob3.jpg')
-  	    }, { 
-			thumb: require('@/assets/projects/aegonMob.jpg'),
-			src: require('@/assets/projects/aegonMob.jpg')
-  	    },]      
+        media1: [
+            { 
+                thumb: require('@/assets/projects/shakedeal.png'),
+                src: require('@/assets/projects/shakedeal.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/shakedeal2.png'),
+                src: require('@/assets/projects/shakedeal2.png')
+            },
+            { 
+                thumb: require('@/assets/projects/sdMob.jpg'),
+                src: require('@/assets/projects/sdMob.jpg')
+            }, 
+            { 
+                thumb: require('@/assets/projects/sdMob2.jpg'),
+                src: require('@/assets/projects/sdMob2.jpg'),
+            }
+        ],
+        media2: [
+            {
+                thumb: require('@/assets/projects/snaphrm2.png'),
+                src: require('@/assets/projects/snaphrm2.png')
+            }, 
+            {
+                thumb: require('@/assets/projects/snaphrm.png'),
+                src: require('@/assets/projects/snaphrm.png')
+            }
+        ],
+        media3: [
+            { 
+                thumb: require('@/assets/projects/mobileapp.png'),
+                src: require('@/assets/projects/mobileapp.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/mobileapp2.png'),
+                src: require('@/assets/projects/mobileapp2.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/hybrid.jpg'),
+                src: require('@/assets/projects/hybrid.jpg')
+            }, 
+            { 
+                thumb: require('@/assets/projects/hybrid2.jpg'),
+                src: require('@/assets/projects/hybrid2.jpg'),
+            }
+        ],
+        media4: [
+            { 
+                thumb: require('@/assets/projects/sdnext2.png'),
+                src: require('@/assets/projects/sdnext2.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/sdnext3.png'),
+                src: require('@/assets/projects/sdnext3.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/sdnext.png'),
+                src: require('@/assets/projects/sdnext.png')
+            }
+        ],
+        media5: [
+            { 
+                thumb: require('@/assets/projects/split-bill2.png'),
+                src: require('@/assets/projects/split-bill2.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/split-bill.png'),
+                src: require('@/assets/projects/split-bill.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/split-bill4.png'),
+                src: require('@/assets/projects/split-bill4.png')
+            }
+          ],
+        media6: [
+            { 
+                thumb: require('@/assets/projects/aegon.png'),
+                src: require('@/assets/projects/aegon.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/aegon2.png'),
+                src: require('@/assets/projects/aegon2.png')
+            }, 
+            { 
+                thumb: require('@/assets/projects/aegonMob2.jpg'),
+                src: require('@/assets/projects/aegonMob2.jpg')
+            }, 
+            { 
+                thumb: require('@/assets/projects/aegonMob3.jpg'),
+                src: require('@/assets/projects/aegonMob3.jpg')
+            }, 
+            { 
+                thumb: require('@/assets/projects/aegonMob.jpg'),
+                src: require('@/assets/projects/aegonMob.jpg')
+            }
+          ]      
     };
   },
-methods: {
-    openGallery(refNo, index) {
-      let refs = `lightbox-${refNo}`;
-      console.log(refs, index, this.$refs[refs]);
-      if(this.$refs[refs] && refs) {
-        this.$refs[refs].showImage(index);
-      }
+    methods: {
+        openGallery(refNo, index) {
+            let refs = `lightbox-${refNo}`;
+            if(this.$refs[refs] && refs) {
+                this.$refs[refs].showImage(index);
+            }
+        }
     }
-  }
 };
 </script>
 
